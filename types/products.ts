@@ -6,3 +6,10 @@ export interface ProductItem {
   color: "Red" | "White" | "Brown" | "Yellow" | "Pink" ;
   aosDelay: string
 }
+
+export interface TopProductsItem {
+  id: number;
+  img: string;
+  title: string;
+  description: string
+}

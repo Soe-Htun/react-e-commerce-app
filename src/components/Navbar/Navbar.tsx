@@ -55,7 +55,12 @@ const DropdownLinks: MenuItem[] = [
     link: "/#"
   }
 ]
-const Navbar = () => {
+
+type NavbarProps = {
+  handleOrderPopup: () => void;
+};
+
+const Navbar: React.FC<NavbarProps> = ({ handleOrderPopup }) => {
   return (
     <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
       {/* upper Navbar */}
@@ -82,7 +87,7 @@ const Navbar = () => {
             </div>
             {/* order button */}
             <button
-              onClick={() => alert("Ordering not available yet")}
+              onClick={() => handleOrderPopup()}
               className="btn-primary flex items-center gap-3 group"
             >
               <span className="group-hover:block hidden transition-all duration-200">
