@@ -14,27 +14,27 @@ const Menu: MenuItem[] = [
   {
     id: 1,
     name: "Home",
-    link: '/#'
+    // link: '/#'
   },
   {
     id: 2,
     name: "Top Rated",
-    link: '/#services'
+    // link: '/#services'
   },
   {
     id: 3,
     name: "Kids Wear",
-    link: '/#'
+    // link: '/#'
   },
   {
     id: 4,
     name: "Mens Wear",
-    link: '/#'
+    // link: '/#'
   },
   {
     id: 5,
     name: "Electronics",
-    link: '/#'
+    // link: '/#'
   }
 ]
 
@@ -42,17 +42,17 @@ const DropdownLinks: MenuItem[] = [
   {
     id: 1,
     name: 'Trending Products',
-    link: "/#"
+    // link: "/#"
   },
   {
     id: 2,
     name: 'Best Rated',
-    link: "/#"
+    // link: "/#"
   },
   {
     id: 3,
     name: 'Top Rated',
-    link: "/#"
+    // link: "/#"
   }
 ]
 
@@ -67,13 +67,12 @@ const Navbar: React.FC<NavbarProps> = ({ handleOrderPopup }) => {
       <div className="bg-primary/40 py-2">
         <div className="container flex justify-between items-center">
           <div>
-            <a
-              href="#"
+            <button
               className="font-bold text-2xl sm:text3xl flex gap-2 items-center"
             >
               <img src={ShoppingLogo} alt="shopping_icon" />
               <h3>Shopsy</h3>
-            </a>
+            </button>
           </div>
           {/* search bar and order button */}
           <div className="flex justify-between items-center gap-3">
@@ -110,26 +109,26 @@ const Navbar: React.FC<NavbarProps> = ({ handleOrderPopup }) => {
         <ul className="sm:flex hidden items-center gap-4">
           { Menu.map((item) => (
             <li key={item.id}>
-              <a href={item.link} 
+              <button
                 className="inline-block px-4 hover:text-primary duration-200"
-              > { item.name } </a>
+              > { item.name } </button>
             </li>
           ))}
 
           <li className="group relative cursor-pointer">
-            <a href="#" className="flex items-center gap-[2px] py-2">
+            <button className="flex items-center gap-[2px] py-2">
               Trending Products
               <span>
                 <FaCaretDown className="transitiona-all duration-200 group-hover:rotate-180" />
               </span>
-            </a>
+            </button>
             <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md">
               <ul>
                 { DropdownLinks.map((item) => (
                   <li key={item.id}>
-                    <a href={item.link}
+                    <button
                       className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
-                    > { item.name } </a>
+                    > { item.name } </button>
                   </li>
                 )) }
               </ul>
