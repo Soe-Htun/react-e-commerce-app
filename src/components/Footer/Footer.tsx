@@ -69,10 +69,10 @@ const Footer = () => {
                   Important Links
                 </h1>
                 <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
+                  {FooterLinks.map((link, key) => (
                     <li
                       className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
+                      key={key}
                     >
                       <span>{link.title}</span>
                     </li>
@@ -86,10 +86,10 @@ const Footer = () => {
                   Links
                 </h1>
                 <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
+                  {FooterLinks.map((link, key) => (
                     <li
                       className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
+                      key={key}
                     >
                       <span>{link.title}</span>
                     </li>
